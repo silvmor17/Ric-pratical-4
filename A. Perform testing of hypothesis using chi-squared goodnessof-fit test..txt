@@ -1,0 +1,23 @@
+A. Perform testing of hypothesis using chi-squared goodnessof-fit test.
+Problem
+Ansystem administrator needs to upgrade the computers for his division. He wants
+to know what sort of computer system his workers prefer. He gives three choices:
+Windows, Mac, or Linux. Test the hypothesis or theory that an equal percentage
+of the population prefers each type of computer system .
+System O Ei
+Windows 20 33.33%
+Mac 60 33.33%
+Linux 20 33.33%
+H0 : The population distribution of the variable is the same as the proposed distribution
+HA : The distributions are different
+To calculate the Chi –Squred value for Windows go to cell D2 and type =((B2-
+C2)*(B2-C2))/C2
+To calculate the Chi –Squred value for Mac go to cell D3 and type =((B3-C3)*(B3-
+C3))/C3
+To calculate the Chi –Squred value for Mac go to cell D3 and type =((B4-C4)*(B4-
+C4))/C4
+Go to Cell D5 for and type=SUM(D2:D4)
+To get the table value for Chi-Square for α = 0.05 and dof = 2, go to cell D7 and type
+=CHIINV(0.05,2)
+At cell D8 type =IF(D5>D7, "H0 Accepted","H0 Rejected")
+Output
