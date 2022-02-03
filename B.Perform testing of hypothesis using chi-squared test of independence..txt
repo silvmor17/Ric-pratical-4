@@ -1,0 +1,152 @@
+B.Perform testing of hypothesis using chi-squared test of independence.
+In a study to understatnd the permormacne of M. Sc. IT Part -1 class, a college selects
+a random sample of 100 students. Each student was asked his grade obtained in B. Sc.
+IT. The sample is as given below
+Sr.
+No Roll No Student's Name Gen Grade Sr. No Roll No Student's Name Gen Grade
+1 1 Gaborone m O 62 3 Maun f O
+2 2 Francistown m O 63 7 Tete f O
+3 5 Niamey m O 64 9 Chimoio f O
+4 13 Maxixe m O 65 11 Pemba f O
+5 16 Tema m O 66 14 Chibuto f O
+6 17 Kumasi m O 67 25 Mampong f O
+7 34 Blida m O 68 36 Tlemcen f O
+8 35 Oran m O 69 40 Adrar f O
+9 38 Saefda m O 70 41 Tindouf f O
+10 42 Constantine m O 71 46 Skikda f O
+11 43 Annaba m O 72 47 Ouargla f O
+12 45 Bejaefa m O 73 10 Matola f D
+13 48 Medea m O 74 20 Legon f D
+14 49 Djelfa m O 75 21 Sunyani f D
+15 50 Tipaza m O 76 72 Teenas f D
+16 51 Bechar m O 77 73 Kouba f D
+17 54 Mostaganem m O 78 75 HussenDey f D
+18 55 Tiaret m O 79 77 Khenchela f D
+19 56 Bouira m O 80 82 HassiBahbah f D
+20 59 Tebessa m O 81 84 Baraki f D
+21 61 El Harrach m O 82 91 Boudouaou f D
+22 62 Mila m O 83 95 Tadjenanet f D
+23 65 Fouka m O 84 4 Molepolole f C
+24 66 El Eulma m O 85 8 Quelimane f C
+25 68 SidiBel Abbes m O 86 23 Bolgatanga f C
+26 69 Jijel m O 87 58 Mohammadia f C
+27 70 Guelma m O 88 83 Merouana f C
+28 85 Khemis El Khechna m O 89 24 Ashaiman f B
+29 87 Bordj El Kiffan m O 90 76 N'gaous f B
+30 88 Lakhdaria m O 91 90 Bab El Oued f B
+31 6 Maputo m D 92 92 BordjMenael f B
+32 12 Lichinga m D 93 93 Ksar El Boukhari f B
+33 15 Ressano Garcia m D 94 74 Reghaa f A
+34 19 Accra m D 95 78 Cheria f A
+35 27 Wa m D 96 79 Mouzaa f A
+36 28 Navrongo m D 97 80 Meskiana f A
+37 37 Mascara m D 98 81 Miliana f A
+38 44 Batna m D 99 94 Sig f A
+39 57 El Biar m D 100 99 Kadiria f A
+40 60 Boufarik m D
+41 63 OuedRhiou m D
+42 64 Souk Ahras m D
+43 71 Dar El Befda m D
+44 86 Birtouta m D
+45 18 Takoradi m C
+46 22 Cape Coast m C
+47 29 Kwabeng m C
+48 30 Algiers m C
+49 31 Laghouat m C
+50 39 Relizane m C
+51 52 Setif m C
+52 53 Biskra m C
+53 67 Kolea m C
+54 100 AefnFakroun m C
+55 26 Nima m B
+56 32 TiziOuzou m B
+57 33 Chlef m B
+PSIT1P1~~~~~ Research in Computing Practical
+M. Sc. [Information Technology] SEMESTER ~ I Teacher’s Reference Manual
+24
+58 89 M'sila m A
+59 96 Heliopolis m A
+60 97 Berrouaghia m A
+61 98 Sougueur m A
+Null Hypothesis - H0 : The performance of girls students is same as boys students.
+Alternate Hypothesis - H1 : The performance of boys and girls students are different.
+Open Excel Workbook
+O A B C D Total
+Girls 11 7 5 5 11 39 6.075
+Boys 30 4 3 10 14 61 6.075
+Total 41 11 8 15 25 100 12.150
+Ei 20.5 5.5 4 7.5 12.5 50
+Prepare a contingency table as shown above.
+To calculate Girls Students with ‘O’ Grade
+Go to Cell N6 and type =COUNTIF($J$2:$K$40,"O")
+To calculate Girls Students with ‘A’ Grade
+Go to Cell O6 and type =COUNTIF($J$2:$K$40,"A")
+To calculate Girls Students with ‘B’ Grade
+Go to Cell P6 and type =COUNTIF($J$2:$K$40,"B")
+To calculate Girls Students with ‘C’ Grade
+Go to Cell Q6 and type =COUNTIF($J$2:$K$40,"C")
+To calculate Girls Students with ‘D’ Grade
+Go to Cell R6 and type =COUNTIF($J$2:$K$40,"D")
+To calculate Boys Students with ‘O’ Grade
+Go to Cell N7 and type =COUNTIF($D$2:$E$62,"O")
+To calculate Boys Students with ‘A’ Grade
+Go to Cell O7 and type =COUNTIF($D$2:$E$62,"A")
+To calculate Boys Students with ‘B’ Grade
+Go to Cell P7 and type =COUNTIF($D$2:$E$62,"B")
+To calculate Boys Students with ‘C’ Grade
+Go to Cell Q7 and type =COUNTIF($D$2:$E$62,"C")
+PSIT1P1~~~~~ Research in Computing Practical
+M. Sc. [Information Technology] SEMESTER ~ I Teacher’s Reference Manual
+25
+To calculate Boys Students with ‘D’ Grade
+Go to Cell R7 and type =COUNTIF($D$2:$E$62,"D")
+To calculated the expected value Ei
+Go to Cell N9 and type =N8/2
+Go to Cell O9 and type =O8/2
+Go to Cell P9 and type =P8/2
+Go to Cell Q9 and type =Q8/2
+Go to Cell R9 and type =R8/2
+Go to Cell S6 and calculate total girl students = SUM(N6:R6)
+Go to Cell S7 and calculate total girl students = SUM(N7:R7)
+Now Calculate
+Go to cell T6 and type
+=SUM((N6-$N$9)^2/$N$9,(O6-$O$9)^2/$O$9,(P6-$P$9)^2/$P$9,(Q6-Q$9)^2/$Q$9,
+(R6-$R$9)^2/$R$9)
+Go to cell T7 and type
+=SUM((N7-$N$9)^2/$N$9,(O7-$O$9)^2/$O$9,(P7-$P$9)^2/$P$9,(Q7-Q$9)^2/$Q$9,
+(R7-$R$9)^2/$R$9)
+To get the table value go to cell T11 and type =CHIINV(0.05,4)
+Go to cell O13 and type =IF(T8>=T11," H0 is Accepted", "H0 is Rejected") 
+PSIT1P1~~~~~ Research in Computing Practical
+M. Sc. [Information Technology] SEMESTER ~ I Teacher’s Reference Manual
+26
+Using Python
+importnumpy as np
+import pandas as pd
+importscipy.stats as stats
+np.random.seed(10)
+stud_grade = np.random.choice(a=["O","A","B","C","D"],
+ p=[0.20, 0.20 ,0.20, 0.20, 0.20], size=100)
+stud_gen = np.random.choice(a=["Male","Female"], p=[0.5, 0.5], size=100)
+mscpart1 = pd.DataFrame({"Grades":stud_grade, "Gender":stud_gen})
+print(mscpart1)
+stud_tab = pd.crosstab(mscpart1.Grades, mscpart1.Gender, margins=True)
+stud_tab.columns = ["Male", "Female", "row_totals"]
+stud_tab.index = ["O", "A", "B", "C", "D", "col_totals"]
+observed = stud_tab.iloc[0:5, 0:2 ]
+print(observed)
+expected = np.outer(stud_tab["row_totals"][0:5],
+stud_tab.loc["col_totals"][0:2]) / 100
+print(expected)
+chi_squared_stat = (((observed-expected)**2)/expected).sum().sum()
+print('Calculated : ',chi_squared_stat)
+crit = stats.chi2.ppf(q=0.95, df=4)
+print('Table Value : ',crit)
+ifchi_squared_stat>= crit:
+print('H0 is Accepted ')
+else:
+print('H0 is Rejected ')
+PSIT1P1~~~~~ Research in Computing Practical
+M. Sc. [Information Technology] SEMESTER ~ I Teacher’s Reference Manual
+27
+Output :
